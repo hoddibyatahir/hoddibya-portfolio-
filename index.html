@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Hoddibya Tahir, Structural Drafter and AutoCAD 2D/3D Designer based in Karachi, Pakistan.">
+  <meta name="author" content="Hoddibya Tahir">
+  <meta name="theme-color" content="#102a43">
+  <title>Hoddibya Tahir | Structural Drafter & AutoCAD Designer</title>
+  <style>
+    :root{--navy:#102a43;--blue:#246b8e;--teal:#55b6a7;--ink:#243b53;--muted:#627d98;--paper:#f5f8fb;--white:#fff;--line:#d9e2ec}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,90%);margin:auto}
+    header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:.3px;color:var(--navy);font-size:18px}
+    .navlinks{display:flex;gap:24px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--blue)}
+    .hero{background:linear-gradient(120deg,#102a43,#174b68 68%,#246b8e);color:white;padding:92px 0 84px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.5fr .8fr;align-items:center;gap:50px}
+    .eyebrow{color:#9ce4d8;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
+    h1{font-size:clamp(38px,6vw,64px);line-height:1.08;margin:14px 0 18px;letter-spacing:-1.8px}
+    .hero p{font-size:18px;color:#d8e6ef;max-width:650px;margin:0 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 19px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block}
+    .btn-primary{background:var(--teal);color:#092b37}.btn-outline{border:1px solid #9db8c8;color:white}
+    .monogram{width:230px;height:230px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;margin:auto;background:radial-gradient(circle at 35% 30%,rgba(85,182,167,.35),rgba(255,255,255,.04) 65%);box-shadow:0 20px 60px #071c2b55}
+    .monogram span{font-size:76px;font-weight:800;letter-spacing:-7px;color:#e8f6f5}
+    section{padding:76px 0}.section-kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    h2{font-size:34px;line-height:1.2;color:var(--navy);margin:9px 0 18px;letter-spacing:-.7px}
+    .lead{max-width:760px;color:var(--muted);font-size:17px}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:start}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .fact{background:white;border:1px solid var(--line);padding:18px;border-radius:12px}
+    .fact strong{display:block;color:var(--navy);font-size:15px}.fact span{font-size:13px;color:var(--muted)}
+    .soft{background:#edf3f7}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:white;border:1px solid var(--line);border-radius:13px;padding:23px;box-shadow:0 8px 24px #102a4308}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .tag{display:inline-block;margin-top:15px;padding:5px 9px;border-radius:20px;background:#e5f4f1;color:#17665d;font-size:11px;font-weight:700}
+    .timeline{border-left:2px solid #b9d8d4;margin:28px 0 0 8px;padding-left:25px}
+    .job{position:relative;margin:0 0 28px}.job:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--teal);left:-31px;top:8px;border:3px solid var(--paper)}
+    .job h3{margin:0;color:var(--navy);font-size:18px}.job .meta{font-size:13px;color:var(--blue);font-weight:700}.job p{margin:7px 0 0;color:var(--muted);font-size:14px}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .project{background:white;border:1px solid var(--line);border-radius:13px;overflow:hidden}
+    .drawing{height:155px;background:#eaf1f5;display:grid;place-items:center;position:relative}
+    .drawing svg{width:82%;height:78%;stroke:#246b8e;fill:none;stroke-width:1.4}
+    .project-body{padding:18px}.project h3{font-size:16px;color:var(--navy);margin:0 0 6px}.project p{font-size:13px;color:var(--muted);margin:0}
+    .note{font-size:12px;color:var(--muted);margin-top:16px}
+    .contact{background:var(--navy);color:white}.contact h2{color:white}.contact p{color:#d8e6ef;max-width:650px}
+    .contact-box{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:25px}
+    footer{background:#0b2032;color:#a9bfce;padding:20px 0;font-size:12px}
+    @media(max-width:760px){.navlinks{gap:12px;font-size:12px}.hero{padding:68px 0}.hero-grid,.about-grid{grid-template-columns:1fr}.monogram{width:165px;height:165px;grid-row:1}.monogram span{font-size:56px}.cards,.projects{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}section{padding:58px 0}}
+    @media(max-width:430px){.navlinks a:nth-child(2),.navlinks a:nth-child(3){display:none}.facts{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap"><nav>
+    <a class="brand" href="#home">HODDIBYA TAHIR</a>
+    <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div>
+  </nav></div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Structural Drafting · AutoCAD 2D & 3D</div>
+        <h1>Hoddibya<br>Tahir</h1>
+        <p>Structural Drafter with a foundation in AutoCAD drafting and 3D design. Focused on clear, accurate technical drawings and continuous professional growth.</p>
+        <div class="actions"><a class="btn btn-primary" href="#portfolio">View Portfolio</a><a class="btn btn-outline" href="#contact">Get in Touch</a></div>
+      </div>
+      <div class="monogram" aria-label="HT monogram"><span>HT</span></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="section-kicker">About me</div>
+        <h2>Technical detail.<br>Thoughtful drafting.</h2>
+        <p class="lead">I am Hoddibya Tahir, a Karachi-based Structural Drafter at Titanium Engineering. My interests include structural drafting, AutoCAD 2D drawings and 3D modelling. I enjoy turning technical requirements and references into organised, readable drawings.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Current Role</strong><span>Structural Drafter</span></div>
+        <div class="fact"><strong>Company</strong><span>Titanium Engineering</span></div>
+        <div class="fact"><strong>Based In</strong><span>Karachi, Pakistan</span></div>
+        <div class="fact"><strong>Core Tool</strong><span>AutoCAD</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="experience">
+    <div class="wrap">
+      <div class="section-kicker">Career</div><h2>Experience & Training</h2>
+      <div class="timeline">
+        <div class="job"><h3>Structural Drafter · Titanium Engineering</h3><div class="meta">Current Position · Karachi, Pakistan</div><p>Working on structural drafting and technical drawing tasks. Add project-specific responsibilities here as your experience grows.</p></div>
+        <div class="job"><h3>Technical Internship · Siemens</h3><div class="meta">Internship</div><p>Practical exposure in a professional technical environment.</p></div>
+        <div class="job"><h3>AutoCAD Training · Hunar Karigar Technical Institute</h3><div class="meta">Training</div><p>Completed AutoCAD training with focus on 2D drafting and 3D design.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-kicker">Capabilities</div><h2>Skills & Tools</h2>
+      <div class="cards">
+        <article class="card"><h3>AutoCAD 2D</h3><p>Technical drafting, drawing layouts, dimensions and annotations.</p><span class="tag">Core Skill</span></article>
+        <article class="card"><h3>AutoCAD 3D</h3><p>3D modelling and visual representation of design concepts.</p><span class="tag">Design</span></article>
+        <article class="card"><h3>Structural Drafting</h3><p>Developing clear, organised structural drawing documentation.</p><span class="tag">Current Work</span></article>
+        <article class="card"><h3>MS Excel</h3><p>Spreadsheets, data organisation and basic reporting.</p><span class="tag">Office Tool</span></article>
+        <article class="card"><h3>Technical Documentation</h3><p>Careful presentation and management of drawing information.</p><span class="tag">Professional</span></article>
+        <article class="card"><h3>Communication</h3><p>Customer support experience and professional coordination.</p><span class="tag">Workplace Skill</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="portfolio">
+    <div class="wrap">
+      <div class="section-kicker">Selected work</div><h2>Portfolio</h2>
+      <p class="lead">A space for selected AutoCAD drawings and drafting samples. Replace these sample panels with images or PDFs of your own work before publishing.</p>
+      <div class="projects">
+        <article class="project"><div class="drawing"><svg viewBox="0 0 240 130"><rect x="18" y="15" width="204" height="98"/><path d="M18 48h204M18 80h204M65 15v98M115 15v98M165 15v98M18 15l204 98M222 15L18 113"/></svg></div><div class="project-body"><h3>2D Drafting Sample</h3><p>Replace with your own 2D drawing image and a short project description.</p></div></article>
+        <article class="project"><div class="drawing"><svg viewBox="0 0 240 130"><path d="M35 100L120 25l85 75-85 20zM35 100V55l85-30v75M120 120V75l85-20v45M35 55l85 45 85-45M120 25v50"/></svg></div><div class="project-body"><h3>3D Model Sample</h3><p>Replace with a screenshot of one of your own AutoCAD 3D models.</p></div></article>
+        <article class="project"><div class="drawing"><svg viewBox="0 0 240 130"><rect x="25" y="20" width="190" height="90"/><path d="M25 65h190M85 20v90M155 20v90M25 20l190 90M215 20L25 110M75 50h90M75 80h90"/></svg></div><div class="project-body"><h3>Structural Drawing Sample</h3><p>Replace with an approved structural drawing sample, with confidential details removed.</p></div></article>
+      </div>
+      <p class="note">Note: The drawings above are decorative placeholders, not completed client projects. Add only work you have permission to share.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-kicker" style="color:#9ce4d8">Contact</div><h2>Let’s connect.</h2>
+      <p>For professional opportunities, drafting projects or collaboration, you can connect with me through my professional profile.</p>
+      <div class="contact-box"><div><strong>Hoddibya Tahir</strong><br><span style="color:#b8ccda">Structural Drafter · Karachi, Pakistan</span></div><a class="btn btn-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Find me on LinkedIn</a></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="year">2026</span> Hoddibya Tahir · Professional Portfolio</div></footer>
+</body>
+</html>
