@@ -1,141 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Hoddibya Tahir, Structural Drafter and AutoCAD 2D/3D Designer based in Karachi, Pakistan.">
-  <meta name="author" content="Hoddibya Tahir">
-  <meta name="theme-color" content="#102a43">
-  <title>Hoddibya Tahir | Structural Drafter & AutoCAD Designer</title>
-  <style>
-    :root{--navy:#102a43;--blue:#246b8e;--teal:#55b6a7;--ink:#243b53;--muted:#627d98;--paper:#f5f8fb;--white:#fff;--line:#d9e2ec}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,90%);margin:auto}
-    header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-weight:800;letter-spacing:.3px;color:var(--navy);font-size:18px}
-    .navlinks{display:flex;gap:24px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--blue)}
-    .hero{background:linear-gradient(120deg,#102a43,#174b68 68%,#246b8e);color:white;padding:92px 0 84px;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.5fr .8fr;align-items:center;gap:50px}
-    .eyebrow{color:#9ce4d8;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
-    h1{font-size:clamp(38px,6vw,64px);line-height:1.08;margin:14px 0 18px;letter-spacing:-1.8px}
-    .hero p{font-size:18px;color:#d8e6ef;max-width:650px;margin:0 0 28px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 19px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block}
-    .btn-primary{background:var(--teal);color:#092b37}.btn-outline{border:1px solid #9db8c8;color:white}
-    .monogram{width:230px;height:230px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;margin:auto;background:radial-gradient(circle at 35% 30%,rgba(85,182,167,.35),rgba(255,255,255,.04) 65%);box-shadow:0 20px 60px #071c2b55}
-    .monogram span{font-size:76px;font-weight:800;letter-spacing:-7px;color:#e8f6f5}
-    section{padding:76px 0}.section-kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-    h2{font-size:34px;line-height:1.2;color:var(--navy);margin:9px 0 18px;letter-spacing:-.7px}
-    .lead{max-width:760px;color:var(--muted);font-size:17px}
-    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:start}
-    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .fact{background:white;border:1px solid var(--line);padding:18px;border-radius:12px}
-    .fact strong{display:block;color:var(--navy);font-size:15px}.fact span{font-size:13px;color:var(--muted)}
-    .soft{background:#edf3f7}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .card{background:white;border:1px solid var(--line);border-radius:13px;padding:23px;box-shadow:0 8px 24px #102a4308}
-    .card h3{margin:0 0 8px;color:var(--navy);font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
-    .tag{display:inline-block;margin-top:15px;padding:5px 9px;border-radius:20px;background:#e5f4f1;color:#17665d;font-size:11px;font-weight:700}
-    .timeline{border-left:2px solid #b9d8d4;margin:28px 0 0 8px;padding-left:25px}
-    .job{position:relative;margin:0 0 28px}.job:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--teal);left:-31px;top:8px;border:3px solid var(--paper)}
-    .job h3{margin:0;color:var(--navy);font-size:18px}.job .meta{font-size:13px;color:var(--blue);font-weight:700}.job p{margin:7px 0 0;color:var(--muted);font-size:14px}
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .project{background:white;border:1px solid var(--line);border-radius:13px;overflow:hidden}
-    .drawing{height:155px;background:#eaf1f5;display:grid;place-items:center;position:relative}
-    .drawing svg{width:82%;height:78%;stroke:#246b8e;fill:none;stroke-width:1.4}
-    .project-body{padding:18px}.project h3{font-size:16px;color:var(--navy);margin:0 0 6px}.project p{font-size:13px;color:var(--muted);margin:0}
-    .note{font-size:12px;color:var(--muted);margin-top:16px}
-    .contact{background:var(--navy);color:white}.contact h2{color:white}.contact p{color:#d8e6ef;max-width:650px}
-    .contact-box{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:25px}
-    footer{background:#0b2032;color:#a9bfce;padding:20px 0;font-size:12px}
-    @media(max-width:760px){.navlinks{gap:12px;font-size:12px}.hero{padding:68px 0}.hero-grid,.about-grid{grid-template-columns:1fr}.monogram{width:165px;height:165px;grid-row:1}.monogram span{font-size:56px}.cards,.projects{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}section{padding:58px 0}}
-    @media(max-width:430px){.navlinks a:nth-child(2),.navlinks a:nth-child(3){display:none}.facts{grid-template-columns:1fr}}
-  </style>
-</head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Post-Tension Drafting Portfolio — conceptual sample illustrations">
+<meta name="theme-color" content="#101b2b">
+<title>Hoddibya Tahir | Post-Tension Drafter</title>
+<style>
+:root{--bg:#0b1220;--panel:#111e30;--panel2:#17283c;--line:#2a4059;--txt:#edf4fa;--muted:#a9bacb;--mint:#8de0c2;--blue:#91bdf3;--paper:#f5f8fa;--ink:#19364c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,91%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#0b1220ee;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:13px;letter-spacing:.13em;font-weight:800}.nav{display:flex;gap:22px;color:var(--muted);font-size:13px}.nav a:hover{color:var(--mint)}
+.hero{padding:86px 0 72px;background:radial-gradient(ellipse at 80% 25%,#284760 0%,transparent 44%),linear-gradient(135deg,#0b1220,#101e30)}.eyebrow{color:var(--mint);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.05;margin:14px 0}.hero h1 span{color:var(--mint)}.lead{max-width:690px;color:var(--muted);font-size:18px}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.chip{border:1px solid #456078;border-radius:30px;padding:6px 12px;color:#dce9f2;font-size:12px}
+section{padding:68px 0}.section-head{margin-bottom:28px}.section-head small{color:var(--mint);letter-spacing:.16em;text-transform:uppercase;font-weight:700}.section-head h2{font-size:clamp(27px,4vw,38px);margin:5px 0 8px}.section-head p{color:var(--muted);max-width:700px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;overflow:hidden}.card-body{padding:20px}.card h3{margin:0 0 5px;font-size:20px}.card p{color:var(--muted);margin:7px 0}.drawing{background:var(--paper);padding:14px;min-height:250px;display:flex;align-items:center}.drawing svg{width:100%;height:auto;display:block}.tag{display:inline-block;color:var(--mint);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:5px}.note{border:1px solid #456078;background:#12243a;border-radius:14px;padding:17px 20px;color:#d5e2ed;margin-top:24px}.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:13px}.skill b{display:block;color:var(--mint);margin-bottom:5px}.skill span{color:var(--muted);font-size:14px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}.aboutbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}.aboutbox p{color:var(--muted)}.contact{background:linear-gradient(120deg,#14283b,#102033);border:1px solid var(--line);border-radius:18px;padding:28px}.contact a{display:inline-block;margin-top:12px;background:var(--mint);color:#102333;font-weight:800;padding:10px 17px;border-radius:8px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
+@media(max-width:720px){.nav{gap:10px;font-size:11px}.grid,.skills,.about{grid-template-columns:1fr}.hero{padding:65px 0 55px}section{padding:52px 0}}
+</style></head>
 <body>
-<header>
-  <div class="wrap"><nav>
-    <a class="brand" href="#home">HODDIBYA TAHIR</a>
-    <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div>
-  </nav></div>
-</header>
-
+<header><div class="wrap"><nav><div class="brand">HT / TECHNICAL PORTFOLIO</div><div class="nav"><a href="#samples">Samples</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav></div></header>
 <main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Structural Drafting · AutoCAD 2D & 3D</div>
-        <h1>Hoddibya<br>Tahir</h1>
-        <p>Structural Drafter with a foundation in AutoCAD drafting and 3D design. Focused on clear, accurate technical drawings and continuous professional growth.</p>
-        <div class="actions"><a class="btn btn-primary" href="#portfolio">View Portfolio</a><a class="btn btn-outline" href="#contact">Get in Touch</a></div>
-      </div>
-      <div class="monogram" aria-label="HT monogram"><span>HT</span></div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap about-grid">
-      <div>
-        <div class="section-kicker">About me</div>
-        <h2>Technical detail.<br>Thoughtful drafting.</h2>
-        <p class="lead">I am Hoddibya Tahir, a Karachi-based Structural Drafter at Titanium Engineering. My interests include structural drafting, AutoCAD 2D drawings and 3D modelling. I enjoy turning technical requirements and references into organised, readable drawings.</p>
-      </div>
-      <div class="facts">
-        <div class="fact"><strong>Current Role</strong><span>Structural Drafter</span></div>
-        <div class="fact"><strong>Company</strong><span>Titanium Engineering</span></div>
-        <div class="fact"><strong>Based In</strong><span>Karachi, Pakistan</span></div>
-        <div class="fact"><strong>Core Tool</strong><span>AutoCAD</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft" id="experience">
-    <div class="wrap">
-      <div class="section-kicker">Career</div><h2>Experience & Training</h2>
-      <div class="timeline">
-        <div class="job"><h3>Structural Drafter · Titanium Engineering</h3><div class="meta">Current Position · Karachi, Pakistan</div><p>Working on structural drafting and technical drawing tasks. Add project-specific responsibilities here as your experience grows.</p></div>
-        <div class="job"><h3>Technical Internship · Siemens</h3><div class="meta">Internship</div><p>Practical exposure in a professional technical environment.</p></div>
-        <div class="job"><h3>AutoCAD Training · Hunar Karigar Technical Institute</h3><div class="meta">Training</div><p>Completed AutoCAD training with focus on 2D drafting and 3D design.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <div class="section-kicker">Capabilities</div><h2>Skills & Tools</h2>
-      <div class="cards">
-        <article class="card"><h3>AutoCAD 2D</h3><p>Technical drafting, drawing layouts, dimensions and annotations.</p><span class="tag">Core Skill</span></article>
-        <article class="card"><h3>AutoCAD 3D</h3><p>3D modelling and visual representation of design concepts.</p><span class="tag">Design</span></article>
-        <article class="card"><h3>Structural Drafting</h3><p>Developing clear, organised structural drawing documentation.</p><span class="tag">Current Work</span></article>
-        <article class="card"><h3>MS Excel</h3><p>Spreadsheets, data organisation and basic reporting.</p><span class="tag">Office Tool</span></article>
-        <article class="card"><h3>Technical Documentation</h3><p>Careful presentation and management of drawing information.</p><span class="tag">Professional</span></article>
-        <article class="card"><h3>Communication</h3><p>Customer support experience and professional coordination.</p><span class="tag">Workplace Skill</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft" id="portfolio">
-    <div class="wrap">
-      <div class="section-kicker">Selected work</div><h2>Portfolio</h2>
-      <p class="lead">A space for selected AutoCAD drawings and drafting samples. Replace these sample panels with images or PDFs of your own work before publishing.</p>
-      <div class="projects">
-        <article class="project"><div class="drawing"><svg viewBox="0 0 240 130"><rect x="18" y="15" width="204" height="98"/><path d="M18 48h204M18 80h204M65 15v98M115 15v98M165 15v98M18 15l204 98M222 15L18 113"/></svg></div><div class="project-body"><h3>2D Drafting Sample</h3><p>Replace with your own 2D drawing image and a short project description.</p></div></article>
-        <article class="project"><div class="drawing"><svg viewBox="0 0 240 130"><path d="M35 100L120 25l85 75-85 20zM35 100V55l85-30v75M120 120V75l85-20v45M35 55l85 45 85-45M120 25v50"/></svg></div><div class="project-body"><h3>3D Model Sample</h3><p>Replace with a screenshot of one of your own AutoCAD 3D models.</p></div></article>
-        <article class="project"><div class="drawing"><svg viewBox="0 0 240 130"><rect x="25" y="20" width="190" height="90"/><path d="M25 65h190M85 20v90M155 20v90M25 20l190 90M215 20L25 110M75 50h90M75 80h90"/></svg></div><div class="project-body"><h3>Structural Drawing Sample</h3><p>Replace with an approved structural drawing sample, with confidential details removed.</p></div></article>
-      </div>
-      <p class="note">Note: The drawings above are decorative placeholders, not completed client projects. Add only work you have permission to share.</p>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="section-kicker" style="color:#9ce4d8">Contact</div><h2>Let’s connect.</h2>
-      <p>For professional opportunities, drafting projects or collaboration, you can connect with me through my professional profile.</p>
-      <div class="contact-box"><div><strong>Hoddibya Tahir</strong><br><span style="color:#b8ccda">Structural Drafter · Karachi, Pakistan</span></div><a class="btn btn-primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Find me on LinkedIn</a></div>
-    </div>
-  </section>
-</main>
-<footer><div class="wrap">© <span id="year">2026</span> Hoddibya Tahir · Professional Portfolio</div></footer>
-</body>
-</html>
+<div class="hero"><div class="wrap"><div class="eyebrow">Post-Tension Drafting</div><h1>Hoddibya <span>Tahir</span></h1><p class="lead">Technical drafting portfolio featuring conceptual examples of post-tension slab layouts, beam profiles, framing plans and reinforcement presentation.</p><div class="chips"><span class="chip">PT Slab Drawings</span><span class="chip">Beam Elevations</span><span class="chip">Framing Layouts</span><span class="chip">Reinforcement Detailing</span></div></div></div>
+<section id="samples"><div class="wrap"><div class="section-head"><small>Illustrative work</small><h2>Sample drawing gallery</h2><p>Original, simplified CAD-style visuals created for this portfolio to explain drafting scope without sharing any employer or client documents.</p></div>
+<div class="grid">
+<article class="card"><div class="drawing"><svg viewBox="0 0 600 280" role="img" aria-label="Conceptual post tension slab layout"><rect x="30" y="25" width="540" height="220" fill="#fff" stroke="#19364c" stroke-width="3"/><g stroke="#b8c7d2" stroke-width="1"><path d="M120 25V245M210 25V245M300 25V245M390 25V245M480 25V245M30 80H570M30 135H570M30 190H570"/></g><g fill="#dce6ec" stroke="#19364c" stroke-width="2"><rect x="20" y="15" width="20" height="20"/><rect x="560" y="15" width="20" height="20"/><rect x="20" y="235" width="20" height="20"/><rect x="560" y="235" width="20" height="20"/></g><g stroke="#159b82" stroke-width="3" fill="none"><path d="M65 45Q100 90 145 45T235 45T325 45T415 45T535 45"/><path d="M65 105Q100 150 145 105T235 105T325 105T415 105T535 105"/><path d="M65 165Q100 210 145 165T235 165T325 165T415 165T535 165"/><path d="M65 225Q100 245 145 225T235 225T325 225T415 225T535 225"/></g><g fill="#19364c" font-size="12" font-family="Arial"><text x="42" y="18">COLUMN GRID / CONCEPTUAL</text><text x="365" y="270">PT tendon paths — schematic</text></g></svg></div><div class="card-body"><span class="tag">Sample 01</span><h3>PT Slab & Tendon Layout</h3><p>Illustrates a typical plan-view presentation of a column grid and indicative tendon paths, with a clear visual distinction between structural grid lines and tendon routes.</p></div></article>
+<article class="card"><div class="drawing"><svg viewBox="0 0 600 280" role="img" aria-label="Conceptual post tension beam elevation"><rect x="28" y="32" width="544" height="205" fill="#fff" stroke="#d7e0e6"/><path d="M65 85H535M65 190H535" stroke="#19364c" stroke-width="2"/><path d="M65 85Q180 215 300 150T535 85" fill="none" stroke="#159b82" stroke-width="4"/><path d="M65 190H535" stroke="#4f83bd" stroke-width="3"/><g fill="#dce6ec" stroke="#19364c" stroke-width="2"><rect x="55" y="78" width="20" height="120"/><rect x="525" y="78" width="20" height="120"/></g><g stroke="#19364c" stroke-width="1.5" fill="none"><path d="M65 55V38H535V55M300 150V225M290 215L300 225L310 215"/></g><g fill="#19364c" font-size="12" font-family="Arial"><text x="225" y="27">BEAM ELEVATION — CONCEPT</text><text x="315" y="222">Indicative profile</text><text x="82" y="180">Support</text><text x="455" y="180">Support</text></g></svg></div><div class="card-body"><span class="tag">Sample 02</span><h3>Beam Elevation & Profile</h3><p>Shows how a beam elevation can communicate support locations, a simplified tendon profile and key drafting annotations in a readable arrangement.</p></div></article>
+<article class="card"><div class="drawing"><svg viewBox="0 0 600 280" role="img" aria-label="Conceptual framing and column layout"><rect x="45" y="25" width="510" height="225" fill="#fff" stroke="#19364c" stroke-width="2"/><g stroke="#4f83bd" stroke-width="5"><path d="M215 25V250M385 25V250M45 100H555M45 175H555"/></g><g fill="#19364c"><rect x="36" y="16" width="18" height="18"/><rect x="206" y="16" width="18" height="18"/><rect x="376" y="16" width="18" height="18"/><rect x="546" y="16" width="18" height="18"/><rect x="36" y="91" width="18" height="18"/><rect x="206" y="91" width="18" height="18"/><rect x="376" y="91" width="18" height="18"/><rect x="546" y="91" width="18" height="18"/><rect x="36" y="166" width="18" height="18"/><rect x="206" y="166" width="18" height="18"/><rect x="376" y="166" width="18" height="18"/><rect x="546" y="166" width="18" height="18"/><rect x="36" y="241" width="18" height="18"/><rect x="206" y="241" width="18" height="18"/><rect x="376" y="241" width="18" height="18"/><rect x="546" y="241" width="18" height="18"/></g><g fill="#19364c" font-size="12" font-family="Arial"><text x="190" y="15">FRAMING PLAN</text><text x="62" y="270">Blue: framing lines  |  Dark blocks: column markers</text></g></svg></div><div class="card-body"><span class="tag">Sample 03</span><h3>Framing & Column Layout</h3><p>Conceptual framing plan showing a regular grid, beam lines and column markers to demonstrate layout organization and drawing clarity.</p></div></article>
+<article class="card"><div class="drawing"><svg viewBox="0 0 600 280" role="img" aria-label="Conceptual top and bottom reinforcement drawing"><rect x="35" y="30" width="530" height="215" fill="#fff" stroke="#19364c" stroke-width="2"/><text x="55" y="55" fill="#19364c" font-size="14" font-weight="bold">REINFORCEMENT PRESENTATION — SCHEMATIC</text><g stroke="#d17b35" stroke-width="3"><path d="M75 95H525M75 120H525M75 145H525"/></g><g stroke="#4f83bd" stroke-width="3"><path d="M75 185H525M75 210H525"/></g><g stroke="#19364c" stroke-width="1.5" fill="none"><path d="M95 82V70H505V82M95 225V235H505V225"/></g><g fill="#19364c" font-size="13"><text x="80" y="88">TOP STEEL — indicative</text><text x="80" y="205">BOTTOM STEEL — indicative</text></g><g fill="#d17b35"><circle cx="75" cy="95" r="4"/><circle cx="525" cy="95" r="4"/></g><g fill="#4f83bd"><circle cx="75" cy="185" r="4"/><circle cx="525" cy="185" r="4"/></g></svg></div><div class="card-body"><span class="tag">Sample 04</span><h3>Top & Bottom Reinforcement</h3><p>Illustrates a simple visual convention for separating top and bottom reinforcement information and keeping notes easy to follow.</p></div></article>
+</div><div class="note"><b>Important:</b> All four visuals are original conceptual illustrations, not project drawings. They are not to scale, do not contain design values, and are for portfolio explanation only — not for construction or engineering approval.</div></div></section>
+<section id="skills" style="background:#0e1928"><div class="wrap"><div class="section-head"><small>Drafting capabilities</small><h2>Areas of work</h2><p>Drafting and drawing preparation based on project information and engineer-approved design inputs.</p></div><div class="skills"><div class="skill"><b>PT Drawings</b><span>Post-tension slab plans and tendon layout presentation.</span></div><div class="skill"><b>Beam Details</b><span>Beam elevations and indicative profile drafting.</span></div><div class="skill"><b>Framing Layouts</b><span>Framing plans, column layouts and drawing coordination.</span></div><div class="skill"><b>Slab Information</b><span>Drop sizing and slab layout drafting from supplied design details.</span></div><div class="skill"><b>Reinforcement</b><span>Top and bottom steel detailing presentation.</span></div><div class="skill"><b>Drawing Notes</b><span>Strand/profile labels, annotations and organized sheet presentation.</span></div></div></div></section>
+<section id="about"><div class="wrap"><div class="section-head"><small>Profile</small><h2>About me</h2></div><div class="about"><div class="aboutbox"><h3>Hoddibya Tahir</h3><p>I am a Post-Tension Drafter interested in preparing clear, organized and professional technical drawings. My portfolio demonstrates drafting topics and sample visual communication using original, non-confidential illustrations.</p><p>I work from project specifications and approved engineering information; design responsibility and final approval remain with the qualified project engineer.</p></div><div class="aboutbox"><h3>Portfolio approach</h3><p>Client and company drawings are confidential and are not displayed here. The sample diagrams on this website were created specifically for this portfolio to demonstrate drawing presentation without exposing private project information.</p></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="contact"><div class="eyebrow">Get in touch</div><h2>Let’s discuss drafting opportunities</h2><p style="color:var(--muted)">For professional enquiries, please contact me through my LinkedIn profile or email.</p><p style="color:var(--muted);font-size:13px">Add your preferred email address and LinkedIn URL before publishing this page.</p></div></div></section>
+</main><footer><div class="wrap">© Hoddibya Tahir · Technical Drafting Portfolio · Conceptual samples only</div></footer>
+</body></html>
